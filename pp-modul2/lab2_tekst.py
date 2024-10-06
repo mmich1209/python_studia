@@ -1,0 +1,1 @@
+print("Te trzy linie tekstu", "zostaly wyswietlone", "za pomoca jednej instrukcji Pythona", sep="\n")
