@@ -19,3 +19,17 @@ print("year3")
 amount += (amount * percentage_yearly)
 print(amount)
 
+print(amount - 46_567)
+
+############
+own_funds= 46_567.
+deposit = own_funds
+factor = 1.075
+
+#rok1
+deposit = deposit * factor #deposit *= factor
+deposit = deposit * factor #deposit *= factor
+deposit = deposit * factor #deposit *= factor
+
+print("Zysk z inwestycji to ", round(deposit - own_funds, 2))
+
