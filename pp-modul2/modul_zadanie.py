@@ -1,1 +1,2 @@
-print("Będę uważał na zajęciach z Pythona", "" *100, sep="\n")
+#print("Będę uważał na zajęciach z Pythona\n" *100)
+print("ma", "ka", "ron", sep="", end="*")

@@ -1,4 +1,5 @@
 # Ustal, czy liczby 14196 i 14199, są podzielna przez: 3, 4, 7 oraz 13
+#task1
 print(14196 % 3 == 0)  # jest
 print(14196 % 4 == 0)  # jest
 print(14196 % 7 == 0)  # jest
