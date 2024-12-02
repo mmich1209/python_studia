@@ -4,7 +4,7 @@ c = (a ** 2 + b ** 2) ** 0.5 #to jest pierwiastek, odwrocona potega)
 
 print("Dlugosc przeciwprostokatnej trojkata o przyprostokatnych " + str(a) + " i " + str(b) + "wynosi" + str(c))
 
-
+5
 
 #pitagorasa
 a = float(input("Podaj bok 1 :"))

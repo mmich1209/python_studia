@@ -9,27 +9,17 @@ percentage_yearly = 0.075
 
 print("year1")
 amount += (amount * percentage_yearly)
-print(amount)
+print("Po pierwszym roku", amount)
 
 print("year2")
 amount += (amount * percentage_yearly)
-print(amount)
+print("Po drugim roku", amount)
 
 print("year3")
 amount += (amount * percentage_yearly)
-print(amount)
+print("Po trzecim roku:", amount)
 
-print(amount - 46_567)
+print("Zysk inwestycji po 3 latach to:", amount - 46_567)
 
-############
-own_funds= 46_567.
-deposit = own_funds
-factor = 1.075
 
-#rok1
-deposit = deposit * factor #deposit *= factor
-deposit = deposit * factor #deposit *= factor
-deposit = deposit * factor #deposit *= factor
-
-print("Zysk z inwestycji to ", round(deposit - own_funds, 2))
 
