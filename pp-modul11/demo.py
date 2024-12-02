@@ -6,9 +6,9 @@
 # a, b = b, a    #odwaracamy jednolinijkowo mozna to zrobic
 #
 # print("a = ", a, "b = ", b)
-#
-# #Kiedy to pomocne? Np przy operowaniu na listach
-#
+
+# # #Kiedy to pomocne? Np przy operowaniu na listach
+# #
 # numbers = [1, 2 ,3 ]
 # print(numbers)
 # numbers[0], numbers[1] = numbers[1], numbers[0]
@@ -36,9 +36,12 @@
 # print(letters)
 ############
 
-list_1 = [9]
-list_2 = list_1 #kopiuje nazwe listy, ale NIE jej zawartosc
-#2 nazwy wskazujace na 1 liste
-list_2[0] = 13
-print(list_1)
+# list_1 = [9]
+# list_2 = list_1 #kopiuje nazwe listy, ale NIE jej zawartosc
+# #2 nazwy wskazujace na 1 liste
+# list_2[0] = 13
+# print(list_1)
 
+numbers = [4, 5, 2, 1, 4, 5, 9, 8, 88, 99]
+new_numbers = numbers[len(numbers)-2:]
+print(new_numbers)

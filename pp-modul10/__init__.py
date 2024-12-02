@@ -9,3 +9,5 @@ for i in range(101): lista_numbers.append(random.randint(0,101))
 
 print(lista_numbers)
 print(len(lista_numbers))
+
+lista_numbers.
