@@ -4,7 +4,7 @@ print(var)
 saldo = 1000.
 owner = "Mateusz Michalski"
 
-print(" Wlascicielem konta jest", owner, "Stan konta to", saldo)
+print("Wlascicielem konta jest", owner, "Stan konta to", saldo)
 
 ##########################
 
