@@ -37,4 +37,4 @@ print("--" * 10)
 for fruit in fruits:
     print(fruit)
 
-
+print(len(fruits), fruits)

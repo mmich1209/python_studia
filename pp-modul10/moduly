@@ -1,0 +1,185 @@
+Python ma bogaty zestaw wbudowanych modułów oraz modułów zewnętrznych, które są powszechnie używane w różnych dziedzinach programowania.
+Oto przegląd najczęściej używanych modułów wraz z ich zastosowaniami:
+
+1. Moduły wbudowane (standardowa biblioteka Pythona)
+Python dostarcza wiele wbudowanych modułów, które są gotowe do użycia bez konieczności instalowania. Oto najpopularniejsze z nich:
+
+1.1. Moduły ogólnego zastosowania:
+random:
+
+Generowanie liczb losowych, wybieranie losowych elementów z listy.
+Przykład:
+
+import random
+print(random.randint(1, 10))  # Losowa liczba od 1 do 10
+math:
+
+Operacje matematyczne (np. pierwiastki, logarytmy, funkcje trygonometryczne).
+Przykład:
+
+import math
+print(math.sqrt(16))  # Wynik: 4.0
+time:
+
+Operacje na czasie, opóźnienia w programie.
+Przykład:
+
+import time
+time.sleep(2)  # Pauza na 2 sekundy
+os:
+
+Operacje na plikach i systemie operacyjnym (np. praca z katalogami, zmienne środowiskowe).
+Przykład:
+
+import os
+print(os.getcwd())  # Aktualny katalog roboczy
+sys:
+
+Interakcja z interpreterem Pythona (np. dostęp do argumentów wiersza poleceń).
+Przykład:
+
+import sys
+print(sys.version)  # Wersja Pythona
+datetime:
+
+Praca z datą i czasem.
+Przykład:
+
+import datetime
+print(datetime.datetime.now())  # Aktualna data i czas
+collections:
+
+Rozszerzone struktury danych, takie jak Counter, defaultdict, deque.
+Przykład:
+
+from collections import Counter
+print(Counter("abracadabra"))  # Zliczanie liter
+1.2. Moduły do obsługi plików:
+os:
+
+Zarządzanie plikami i katalogami.
+Przykład:
+
+import os
+os.mkdir("nowy_folder")  # Tworzenie katalogu
+shutil:
+
+Kopiowanie i przenoszenie plików oraz katalogów.
+Przykład:
+
+import shutil
+shutil.copy("plik.txt", "plik_kopia.txt")  # Kopiowanie pliku
+pathlib:
+
+Obsługa ścieżek do plików w sposób obiektowy.
+Przykład:
+
+from pathlib import Path
+path = Path("plik.txt")
+print(path.exists())  # Czy plik istnieje
+1.3. Moduły do pracy z danymi:
+json:
+
+Praca z danymi w formacie JSON (serializacja i deserializacja).
+Przykład:
+
+import json
+dane = {"name": "Alice", "age": 25}
+dane_json = json.dumps(dane)
+print(dane_json)  # Wynik: '{"name": "Alice", "age": 25}'
+csv:
+
+Praca z plikami CSV.
+Przykład:
+
+import csv
+with open("dane.csv", mode="w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["name", "age"])
+    writer.writerow(["Alice", 25])
+statistics:
+
+Podstawowe funkcje statystyczne (średnia, mediana, odchylenie standardowe).
+Przykład:
+
+from statistics import mean
+print(mean([1, 2, 3, 4]))  # Wynik: 2.5
+2. Popularne moduły zewnętrzne (instalowane przez pip)
+Moduły zewnętrzne muszą być zainstalowane za pomocą narzędzia pip:
+
+bash
+Copy code
+pip install nazwa_modulu
+2.1. Analiza danych i statystyka:
+numpy:
+
+Operacje na dużych tablicach liczbowych i macierzach.
+Przykład:
+
+import numpy as np
+arr = np.array([1, 2, 3])
+print(arr * 2)  # Wynik: [2 4 6]
+pandas:
+
+Praca z tabelami i danymi strukturalnymi.
+Przykład:
+
+import pandas as pd
+data = {"Name": ["Alice", "Bob"], "Age": [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+2.2. Wizualizacja danych:
+matplotlib:
+
+Tworzenie wykresów i wizualizacji.
+Przykład:
+
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()
+seaborn:
+
+Wyższy poziom wizualizacji danych oparty na matplotlib.
+Przykład:
+
+import seaborn as sns
+sns.histplot([1, 2, 3, 2, 1, 3])
+2.3. Praca z API i sieciami:
+requests:
+
+Pobieranie danych z internetu.
+Przykład:
+
+import requests
+response = requests.get("https://api.github.com")
+print(response.json())
+beautifulsoup4:
+
+Parsowanie HTML i scrapowanie stron internetowych.
+Przykład:
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup("<html><body><p>Hello!</p></body></html>", "html.parser")
+print(soup.p.text)  # Wynik: "Hello!"
+2.4. Uczenie maszynowe i sztuczna inteligencja:
+scikit-learn:
+Algorytmy uczenia maszynowego (np. klasyfikacja, regresja).
+tensorflow:
+Tworzenie i trenowanie sieci neuronowych.
+keras:
+
+Wyższy poziom abstrakcji dla sieci neuronowych oparty na TensorFlow.
+Najczęściej używane moduły w skrócie:
+Wbudowane:
+
+random, math, time, datetime, os, sys, collections, json, csv, statistics.
+Zewnętrzne:
+
+numpy, pandas, matplotlib, seaborn, requests, beautifulsoup4.
+Jeśli chcesz więcej informacji o którymś z modułów, daj znać! 😊
+
+
+
+
+
+

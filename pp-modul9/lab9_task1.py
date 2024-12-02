@@ -15,3 +15,4 @@ for i in range(zakres_poczatkowy, zakres_koncowy + 1):
         print(i, end="")
     is_first = False
 print(".")
+

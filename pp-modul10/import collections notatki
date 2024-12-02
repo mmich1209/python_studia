@@ -1,0 +1,107 @@
+Nauka: Moduł collections
+Moduł collections to standardowa biblioteka Pythona, która oferuje kilka dodatkowych, przydatnych struktur danych.
+
+Najczęściej używane narzędzia to:
+
+Counter: Służy do zliczania wystąpień elementów w iterowalnym obiekcie (np. liście, stringu).
+
+defaultdict: Słownik, który automatycznie przypisuje wartości domyślne do kluczy.
+
+deque: Dwukierunkowa kolejka (można dodawać/usuwać elementy z obu stron).
+
+namedtuple: Struktura podobna do krotki, ale z nazwanymi polami.
+
+OrderedDict: Słownik, który pamięta kolejność dodanych elementów (od Python 3.7 standardowy dict działa tak samo).
+
+
+Przykłady użycia collections
+1. Counter
+from collections import Counter
+
+# Przykład 1: Zliczanie liter w stringu
+text = "abracadabra"
+counter = Counter(text)
+print(counter)  # Counter({'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1})
+
+# Przykład 2: Zliczanie cyfr w liście
+numbers = [1, 2, 3, 3, 4, 1, 2, 3]
+counter = Counter(numbers)
+print(counter)  # Counter({3: 3, 1: 2, 2: 2, 4: 1})
+
+# Najczęstszy element
+most_common_digit, count = counter.most_common(1)[0]
+print(f"Najczęstszy element to {most_common_digit}, wystąpił {count} razy.")
+
+
+---------------
+
+Funkcje sum i max
+sum: Oblicza sumę elementów w iterowalnym obiekcie.
+
+numbers = [1, 2, 3, 4, 5]
+result = sum(numbers)  # 1 + 2 + 3 + 4 + 5 = 15
+print(result)
+
+max: Znajduje największy element w iterowalnym obiekcie.
+numbers = [1, 2, 3, 4, 5]
+maximum = max(numbers)  # 5
+print(maximum)
+
+-----------
+
+1. Funkcja min
+Funkcja min znajduje najmniejszą wartość w iterowalnym obiekcie (np. lista, krotka).
+
+Składnia:
+min(iterable)
+# lub
+min(arg1, arg2, *args)
+Przykłady:
+Znajdowanie najmniejszej wartości w liście:
+
+
+liczby = [5, 2, 9, 1, 7]
+najmniejsza = min(liczby)
+print(najmniejsza)  # Wynik: 1
+Znajdowanie najmniejszej wartości wśród kilku liczb:
+
+
+najmniejsza = min(10, 20, 5, 15)
+print(najmniejsza)  # Wynik: 5
+Znajdowanie najmniejszego elementu w stringach (alfabetycznie):
+
+
+slowa = ["jabłko", "gruszka", "banan"]
+najmniejsze_slowo = min(slowa)
+print(najmniejsze_slowo)  # Wynik: "banan" (alfabetycznie najwcześniejsze)
+
+----------------------
+
+. Funkcja mean (średnia arytmetyczna)
+Funkcja mean znajduje średnią arytmetyczną elementów. Jest dostępna w module statistics.
+
+Składnia:
+from statistics import mean
+mean(iterable)
+Przykłady:
+Obliczanie średniej arytmetycznej dla listy liczb:
+
+from statistics import mean
+
+liczby = [5, 2, 9, 1, 7]
+srednia = mean(liczby)
+print(srednia)  # Wynik: 4.8
+Obliczanie średniej dla liczb całkowitych:
+
+from statistics import mean
+
+liczby = [10, 20, 30]
+srednia = mean(liczby)
+print(srednia)  # Wynik: 20.0
+Działa również dla liczb zmiennoprzecinkowych:
+
+from statistics import mean
+
+liczby = [1.5, 2.5, 3.5]
+srednia = mean(liczby)
+print(srednia)  # Wynik: 2.5

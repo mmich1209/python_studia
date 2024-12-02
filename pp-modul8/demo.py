@@ -33,14 +33,14 @@
 # Czyli silnia 3!
 # 3! = 1 * 2 * 3 = 6
 #
-# number = 5
-# factorial = 1
-#
-# for i in range(1, number + 1):
-#     factorial *= i
-#     print(factorial)
+number = 5
+factorial = 1
 
-# Teraz zrobmy to tylko z petla while
+for i in range(1, number + 1):
+    factorial *= i
+    print(factorial)
+
+#Teraz zrobmy to tylko z petla while
 
 
 
@@ -50,6 +50,7 @@ factorial = 1
 while number:
     factorial *= number
     number -= 1
+    print(factorial)
 
 print(factorial)
 
