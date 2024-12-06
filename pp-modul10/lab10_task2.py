@@ -11,7 +11,8 @@
 import random
 counter_szostek = 0
 lista_rzutow = []
-values_repeated = 0
+max_repeated = 0
+current_repeated = 0
 
 
 for i in range(17):  # 16 rzutow
@@ -24,11 +25,12 @@ print(lista_rzutow)
 print("Rzut nr. 8 to: ", lista_rzutow[7])
 print("Liczba rzutow o wartosci 6 to:", counter_szostek)
 
-for i in lista_rzutow:
-    if lista_rzutow[i] == lista_rzutow[i+1]:
-        values_repeated += 1
-print("Ilosc maxymalnych tych samych wartoisc pod rzad:", values_repeated)
+# Obliczenie maksymalnej liczby tych samych wartości pod rząd
+for i in range(1, len(lista_rzutow)):
+    if lista_rzutow[i] == lista_rzutow[i - 1]:
+        current_repeated += 1
+        max_repeated = max(max_repeated, current_repeated)
+    else:
+        current_repeated = 1
 
-# if i == i +1:
-# values_repeated += 1
-
+print("Maksymalna liczba wyrzuconych tych samych wartości pod rząd:", max_repeated)

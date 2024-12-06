@@ -1,0 +1,179 @@
+Co to jest lista w liście?
+Lista w liście to po prostu lista, której elementy również są listami. Na przykład:
+
+python
+Copy code
+matrix = [
+    [1, 2, 3],  # pierwszy wiersz
+    [4, 5, 6],  # drugi wiersz
+    [7, 8, 9]   # trzeci wiersz
+]
+Powyższa struktura to macierz 3x3. Każda "wewnętrzna lista" reprezentuje wiersz macierzy.
+
+Jak pracować z listami wielowymiarowymi?
+1. Dostęp do elementów
+Możesz odwołać się do elementów w listach zagnieżdżonych, podając odpowiednie indeksy.
+
+Przykład:
+
+python
+Copy code
+# Dostęp do elementów
+print(matrix[0])        # [1, 2, 3] - pierwszy wiersz
+print(matrix[1][2])     # 6 - trzeci element w drugim wierszu
+print(matrix[2][1])     # 8 - drugi element w trzecim wierszu
+2. Iteracja przez listy
+Możesz używać pętli, aby przejść przez całą strukturę.
+
+Przykład:
+
+# Iterowanie przez wiersze
+for row in matrix:
+    print(row)
+
+# Iterowanie przez wszystkie elementy
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+Wynik:
+
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+1 2 3 4 5 6 7 8 9
+
+Przykłady zastosowań
+1. Tworzenie macierzy 2D
+Możesz łatwo stworzyć macierz w Pythonie:
+
+# Macierz 3x3 wypełniona zerami
+matrix = [[0 for _ in range(3)] for _ in range(3)]
+print(matrix)
+Wynik:
+
+[[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+2. Modyfikacja elementów macierzy
+Zmiana wartości w macierzy polega na odwołaniu się do odpowiednich indeksów:
+
+matrix[1][1] = 5  # Zmieniamy środkowy element
+print(matrix)
+
+Wynik:
+
+[[0, 0, 0], [0, 5, 0], [0, 0, 0]]
+
+
+3. Transpozycja macierzy
+Transpozycja macierzy polega na zamianie wierszy z kolumnami:
+# Transpozycja macierzy
+transposed = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+print(transposed)
+Wynik dla macierzy matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]:
+
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]+
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+zmienia na [[1, 4], [2, 5], [3, 6]]. Jest numpy do tego:
+import numpy as np
+
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+transposed = matrix.T
+print(transposed)
+
+Czy stosowanie pętli zagnieżdżonych jest złe?
+Nie zawsze. Oto kluczowe zasady:
+
+Kiedy to jest OK?
+
+Prosta struktura danych: W przypadku macierzy czy tablic wielowymiarowych, takie pętle są naturalne i intuicyjne.
+Małe rozmiary danych: Jeśli masz małą macierz (np. 3x3, 10x10), pętle zagnieżdżone są efektywne i czytelne.
+Jednorazowe operacje: W wielu skryptach czy analizach danych taki sposób iteracji jest szybki w implementacji.
+Przykład:
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+
+Wynik
+1 2 3 4 5 6 7 8 9
+
+Kiedy unikać?
+
+Duże zbiory danych: Jeśli macierz jest ogromna (np. 1000x1000), iterowanie przez każdy element może być powolne.
+Złożoność algorytmów: W bardziej złożonych przypadkach zagnieżdżone pętle mogą zwiększać złożoność czasową
+(np. O(n²) lub O(n³)).
+Powtarzające się obliczenia: Jeśli w pętli wykonujesz kosztowne operacje, warto je zoptymalizować.
+
+----------------------------
+
+Masz rację, że pętle zagnieżdżone (loop within a loop) bywają problematyczne, ale to zależy od kontekstu i złożoności kodu. W przypadku zagnieżdżonych list (jak macierze czy tablice wielowymiarowe), zagnieżdżone pętle są często stosowaną praktyką, szczególnie gdy potrzebujesz przejść przez wszystkie elementy w strukturze.
+
+Czy stosowanie pętli zagnieżdżonych jest złe?
+Nie zawsze. Oto kluczowe zasady:
+
+Kiedy to jest OK?
+
+Prosta struktura danych: W przypadku macierzy czy tablic wielowymiarowych, takie pętle są naturalne i intuicyjne.
+Małe rozmiary danych: Jeśli masz małą macierz (np. 3x3, 10x10), pętle zagnieżdżone są efektywne i czytelne.
+Jednorazowe operacje: W wielu skryptach czy analizach danych taki sposób iteracji jest szybki w implementacji.
+Przykład:
+
+python
+Copy code
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+Wynik:
+
+Copy code
+1 2 3 4 5 6 7 8 9
+Kiedy unikać?
+
+Duże zbiory danych: Jeśli macierz jest ogromna (np. 1000x1000), iterowanie przez każdy element może być powolne.
+Złożoność algorytmów: W bardziej złożonych przypadkach zagnieżdżone pętle mogą zwiększać złożoność czasową (np. O(n²) lub O(n³)).
+Powtarzające się obliczenia: Jeśli w pętli wykonujesz kosztowne operacje, warto je zoptymalizować.
+Alternatywy dla pętli zagnieżdżonych
+Jeśli musisz pracować z dużymi strukturami, istnieją sposoby na ich optymalizację:
+
+List comprehensions (bardziej pythoniczne podejście):
+# Wyciągnięcie wszystkich elementów w jednej linii
+all_elements = [element for row in matrix for element in row]
+print(all_elements)
+Wynik:
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Alternatywy dla pętli zagnieżdżonych
+Jeśli musisz pracować z dużymi strukturami, istnieją sposoby na ich optymalizację:
+
+List comprehensions (bardziej pythoniczne podejście):
+
+python
+Copy code
+# Wyciągnięcie wszystkich elementów w jednej linii
+all_elements = [element for row in matrix for element in row]
+print(all_elements)
+Wynik:
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+Biblioteki takie jak NumPy:
+
+NumPy to specjalistyczna biblioteka do pracy z macierzami i dużymi tablicami. Jest zoptymalizowana pod kątem wydajności i eliminuje potrzebę używania pętli w wielu przypadkach.
+Przykład z NumPy:
+
+import numpy as np
+
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(matrix.flatten())  # Wszystkie elementy w jednej linii
+Wynik:
+
+[1 2 3 4 5 6 7 8 9]
+Użycie funkcji wbudowanych: Wiele operacji na listach można wykonać, używając wbudowanych funkcji, takich jak map, reduce, lub nawet prostych iteracji w jednej pętli.
+
+
