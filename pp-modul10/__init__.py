@@ -11,3 +11,7 @@ print(lista_numbers)
 print(len(lista_numbers))
 
 lista_numbers.
+
+
+#RANDOM SAMPLE - BEZ DUPLIKATÓW
+#random.sample(range(1, 11), 5)

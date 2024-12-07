@@ -177,3 +177,9 @@ Wynik:
 Użycie funkcji wbudowanych: Wiele operacji na listach można wykonać, używając wbudowanych funkcji, takich jak map, reduce, lub nawet prostych iteracji w jednej pętli.
 
 
+Iterowanie elementow jednej listy przez druga liste:
+for i in obstawione_liczby:
+    if i in wylosowane_liczby:
+        print("Tak! Ta liczba", i, "zostala wylosowana. Gratulacje!")
+    else:
+        print("Niestety ta liczba", i, "nie zostala wylosowana.")

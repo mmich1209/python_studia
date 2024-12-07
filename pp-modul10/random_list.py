@@ -9,3 +9,4 @@
 #     numbers.append(number)
 # print(numbers)
 
+#RANDOM.SAMPLE - losuje bez duplikatow

@@ -10,3 +10,6 @@ print(row_y)
 
 matrix = [[row_x[:], row_y[:]]]
 print(matrix)
+
+# Napisz program wypisujacy w jednej linii oddzielone przecinkami wszystkie liczby parzyste ze zbioru 1 do 100
+
