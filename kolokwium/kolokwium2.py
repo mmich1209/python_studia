@@ -6,5 +6,4 @@ for i in zbior_liczb:
     if i == zbior_liczb[-1]:
         print(str(i), end="")
     else:
-     print(str(i) + ",", end="")
-
+        print(str(i) + ",", end="")
