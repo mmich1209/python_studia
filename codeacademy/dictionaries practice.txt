@@ -1,0 +1,68 @@
+Write a function named sum_values that takes a dictionary named my_dictionary as a parameter. The function should return the sum of the values of the dictionary
+
+def sum_values(my_dictionary):
+  total = 0
+  for value in my_dictionary.values():
+    total += value
+  return total
+
+
+Create a function called sum_even_keys that takes a dictionary named my_dictionary, with all integer keys and values, as a parameter. This function should return the sum of the values of all even keys.
+
+def sum_even_keys(my_dictionary):
+  total = 0
+  for key in my_dictionary.keys():
+    if key%2 == 0:
+      total += my_dictionary[key]
+  return total
+
+
+Create a function named add_ten that takes a dictionary with integer values named my_dictionary as a parameter. The function should add 10 to every value in my_dictionary and return my_dictionary
+
+def add_ten(my_dictionary):
+  for key in my_dictionary.keys():
+    my_dictionary[key] += 10
+  return my_dictionary
+
+
+
+Write a function named word_length_dictionary that takes a list of strings named words as a parameter. The function should return a dictionary of key/value pairs where every key is a word in words and every value is the length of that word.
+
+def word_length_dictionary(words):
+  word_lengths = {}
+  for word in words:
+    word_lengths[word] = len(word)
+  return word_lengths
+
+
+
+
+
+Frequency Count
+Write a function named frequency_dictionary that takes a list of elements named words as a parameter. The function should return a dictionary containing the frequency of each element in words.
+
+To create a new dictionary we set a variable equal to {}. We iterate through each of the strings in the list of strings and check if it is already in our dictionary using the in keyword. If it is not then we add it as a new key-value pair where the value is 0. Regardless of whether the string was already in the dictionary, increase the value by 1. This will make it so all new entries will have a value of 1 and all existing entries will increase their old value by 1.
+
+def frequency_dictionary(words):
+  freqs = {}
+  for word in words:
+    if word not in freqs:
+      freqs[word] = 0
+    freqs[word] += 1
+  return freqs
+
+
+
+
+Unique Values
+
+Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. The function should return the number of unique values in the dictionary.
+
+This function has a similar structure to the last one except that the input has been changed to a dictionary. We iterate through each of the values and whenever we find one we have not added to our list already, we add it to the list. After the loop, we return the length of the list since that contains all unique values from the dictionary.
+
+def unique_values(my_dictionary):
+  seen_values = []
+  for value in my_dictionary.values():
+    if value not in seen_values:
+      seen_values.append(value)
+  return len(seen_values)
