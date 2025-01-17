@@ -18,7 +18,7 @@ def get_data():
             break
 
     if student in students:
-        marks = student[student]
+        marks = students[student]
         marks.append(mark)
     else:
         marks = [mark]
@@ -28,7 +28,9 @@ def get_data():
 
 
 def print_summary(students):
-    pass
+    counter = 1
+    for student in sorted(students.keys()):
+        print(student, students[student])
 
 
 # print_summary(get_data())

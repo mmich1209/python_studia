@@ -11,3 +11,4 @@ def print_character(character, how_many_times, horizontal):
 # print_character("A", 3, True)
 
 print_character("XD", 15, False)
+print_character("&", 10, True)

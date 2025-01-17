@@ -2,16 +2,6 @@
 #
 # #podnoszenie do potegi
 # # **
-#
-# def potega(numbers, potega):
-#     for i in numbers:
-#         wynik = i ** potega
-#         return wynik
-#
-# numbers = [1,2,3,4,5]
-#
-# print(potega(numbers,2))
-#
 
 def pow(numbers, exponent):
     numbers = numbers[:]  # zabezpieczenie przed modyfikacja listy

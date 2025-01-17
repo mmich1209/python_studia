@@ -8,3 +8,9 @@ def sum_numbers(numbers):   #to lista
 
 numbers = [1,2,3,4,5]
 print(sum_numbers(numbers))
+
+
+
+# lista = [1, 2, 3, 4, 5]
+# suma = sum(lista)
+# print(suma)  # Wynik: 15
