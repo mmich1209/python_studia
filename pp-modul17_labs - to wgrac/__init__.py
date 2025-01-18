@@ -1,0 +1,1 @@
+print("INICJALIZUJE PACK 1")
